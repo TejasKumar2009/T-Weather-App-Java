@@ -1,0 +1,1865 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sunny"
+   >
+
+    <LinearLayout
+        android:id="@+id/root_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/loading_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="730dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textSize="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#3DDC84"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/search_linear_layout"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/search_input"
+                android:inputType="text"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="8"
+                android:background="@color/white"
+                android:hint="Enter city nane"
+                android:paddingLeft="10dp" />
+
+            <ImageView
+                android:id="@+id/settings_btn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_settings_24" />
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/extra_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/extra_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/search_image"/>
+
+                <TextView
+                    android:id="@+id/extra_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="50dp"
+                    android:textStyle="bold"
+                    android:text="Search Any City's Weather in World."/>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="100dp">
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginBottom="30dp"-->
+<!--                android:orientation="horizontal">-->
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_settings_24" />
+
+<!--            </LinearLayout>-->
+
+            <TextView
+                android:id="@+id/placeHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Pune, India"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tempratureHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:gravity="center"
+                    android:text="30° C"
+                    android:textColor="@color/black"
+                    android:textSize="40dp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/weather_logo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:id="@+id/weather_condition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Partly Cloudy"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/local_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="2023-01-13 14:30"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:orientation="vertical"
+                android:background="#979797"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="100dp"
+                android:paddingBottom="25dp"
+                android:paddingTop="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="Today's Hourly Forecast"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="30dp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#979797">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/hourly_forecast_logo1"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/cloudy_logo"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20dp"
+                            android:text="00:00"
+                            android:textColor="@color/white"
+                            android:layout_marginBottom="5dp"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/hourly_forecast_temp1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:text="26 °C"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/hourly_forecast_temptext1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="25dp"
+                            android:text="Heavy Rain with Light Thunder"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/hourly_forecast_logo2"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/cloudy_logo"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text="01:00"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/hourly_forecast_temp2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:text="28 °C"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/hourly_forecast_temptext2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="25dp"
+                            android:text="Mist"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/hourly_forecast_logo3"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/cloudy_logo"
+                            android:layout_gravity="center"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20dp"
+                            android:text="02:00"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/hourly_forecast_temp3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:text="31 °C"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/hourly_forecast_temptext3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="25dp"
+                            android:text="Mist"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo4"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="03:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo5"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="04:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo6"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="05:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo7"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="06:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo8"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="07:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo9"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="08:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>  <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/hourly_forecast_logo10"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/cloudy_logo"
+                            android:layout_gravity="center"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20dp"
+                            android:text="09:00"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/hourly_forecast_temp10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:text="31 °C"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/hourly_forecast_temptext10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="25dp"
+                            android:text="Mist"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo11"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="10:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo12"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="11:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo13"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="12:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp13"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext13"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo14"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="13:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp14"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext14"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo15"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="14:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp15"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext15"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo16"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="15:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp16"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext16"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo17"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="16:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp17"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext17"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo18"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="17:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp18"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext18"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo19"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="18:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp19"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext19"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo20"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="19:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp20"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext20"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo21"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="20:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp21"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext21"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo22"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="21:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp22"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext22"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo23"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="22:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp23"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext23"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hourly_forecast_logo24"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cloudy_logo"
+                                android:layout_gravity="center"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="20dp"
+                                android:text="23:00"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temp24"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="30dp"
+                                android:text="31 °C"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/hourly_forecast_temptext24"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="25dp"
+                                android:text="Mist"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+
+
+<!--                </LinearLayout>-->
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="#979797"
+                android:text="    3 Day Weather Forecast       "/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#979797"
+                android:orientation="horizontal"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginBottom="100dp">
+<!--                Mannu-->
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="Today's Forecast"
+                    android:backgroundTint="#B0B0B0" />
+
+                <Button
+                    android:id="@+id/tomorrow_forecast_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:textSize="13dp"
+                    android:text="2024-05-02 Forecast"
+                    android:backgroundTint="#B0B0B0"/>
+
+                <Button
+                    android:id="@+id/overmorrow_forecast_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:textSize="13dp"
+                    android:text="2024-05-03 Forecast"
+                    android:backgroundTint="#B0B0B0"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="vertical"
+                android:background="#979797">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+
+                    android:text="Weather Details"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="35dp" />
+
+                <TextView
+                    android:id="@+id/details_temprature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Temprature    :    30° C"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/details_min_temprature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Min. Temprature    :    27° C"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/details_max_temprature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Max. Temprature    :    38° C"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/details_feels_like"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Feels Like    :    28° C"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/details_rain_chance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Chance of Rain    :    30%"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/details_snow_chance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Chance of Snow    :    0%"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/details_humidity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Humidity    :    60%"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/details_windspeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Wind Speed    :    7 km/h"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/details_winddegree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Wind Degree    :    256°"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/details_pressure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Pressure    :    1001 mb"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/details_clouds_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Clouds Cover    :    13%"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/details_visibility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Visibility    :    10 km"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/details_uvindex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="UV Index    :    5"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/details_windgust"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Wind Gust    :    15 km/h"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/details_air_quality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Air Quality    :    Unhealthy for sensitive group"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginBottom="100dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:orientation="vertical"
+            android:background="#979797">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Location Details"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/details_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Location    :    Pune"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/details_region"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Region    :    Maharashtra"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/details_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Country    :    India"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/details_timezone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Time Zone    :    Asia/Kolkata"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/details_latitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Latitude    :    18.53"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/details_longitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Longitude    :    73.87"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Sun and Moon Info"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="35dp" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#979797"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sunrise" />
+
+            <TextView
+                android:id="@+id/details_sunrise"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Sunrise : 06:07 AM"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sunset"/>
+
+            <TextView
+                android:id="@+id/details_sunset"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Sunset : 06:56 PM"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:background="#979797">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/moonrise" />
+
+                    <TextView
+                        android:id="@+id/details_moonrise"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Moonrise : 04:05 PM"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/moonset" />
+
+                    <TextView
+                        android:id="@+id/details_moonset"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Moonset : 03:52 AM"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

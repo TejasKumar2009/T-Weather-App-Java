@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">T-Weather</string>
+    <string-array name="temprature_units">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+    </string-array>
+
+    <string-array name="temprature_units_f">
+        <item>Fahrenheit</item>
+        <item>Celsius</item>
+    </string-array>
+</resources>
