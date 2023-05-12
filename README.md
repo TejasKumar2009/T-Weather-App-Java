@@ -10,8 +10,9 @@ Description - The Amazing Weather App made using java that has features like
 ### 3. Basic Weather Details
 ### 4. Hourly Weather Forecast of 24 hours
 ### 5. 3 Day Daily Weather Forecast
-### 6. Get User's Current Location
-### 7. Amazing UI & Responsive Design
+### 6. Search Any City's Weather in the World
+### 7. Get User's Current Location
+### 8. Amazing UI & Responsive Design
 
 
 ## Technologies Used -
